@@ -6,9 +6,44 @@
 <!--[if !IE]><!--><html lang="en"><!-- <![endif]-->
 <head>
 	<title>Happy Birthday 🥳</title>
+	<footer>
+    Made with ❤ by Ankit
+</footer>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protected Page</title>
+<body>
+    <h1>Welcome to the Protected Page</h1>
+    <!-- Authentication -->
+    <form method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" value="Login">
+    </form>
+
+    <?php
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        if ($username === 'ankit' && $password === 'lucky') {
+            // Authentication successful
+            echo '<p>Welcome, Ankit!</p>';
+            // Proceed to show the content of the webpage
+        } else {
+            // Authentication failed
+            echo '<p>Invalid username or password. Please try again.</p>';
+        }
+    }
+    ?>
+</body>
 	<meta charset="UTF-8" />
-	<meta name="description" content="Happy Birthday">
+	<meta name="description" content="Happy Birthday Prachi">
 	<meta name="robots" content="index, follow" />
+	<link rel="author" href="https://plus.google.com/u/1/+AyushSharma1/" /> 
     <meta name="keywords" content="Birthday, Happy">
     <!-- Strat of Facebook Meta -->
     <meta property="og:type" content="E-Greeting" />
@@ -35,25 +70,25 @@
 	   Your browser isn't invited for super fun audio time.
     </audio>
     <div class="balloons text-center" id="b1">
-    	<h2 style="color:#F2B300;">H</h2>
+    	<h2 style="color:#F2B300;">HBD</h2>
     </div>
     <div class="balloons text-center" id="b2">
-    	<h2 style="color:#0719D4;">BD</h2>
+    	<h2 style="color:#0719D4;">P</h2>
     </div>
 	<div class="balloons text-center" id="b3">
-    	<h2 style="color:#D14D39;">L</h2>
+    	<h2 style="color:#D14D39;">R</h2>
     </div>
 	<div class="balloons text-center" id="b4">
-    	<h2 style="color:#8FAD00;">U</h2>
+    	<h2 style="color:#8FAD00;">A</h2>
     </div>
 	<div class="balloons text-center" id="b5">
     	<h2 style="color:#8377E4;">C</h2>
     </div>
     <div class="balloons text-center" id="b6">
-    	<h2 style="color:#99C96A;">K</h2>
+    	<h2 style="color:#99C96A;">H</h2>
     </div>
     <div class="balloons text-center" id="b7">
-    	<h2 style="color:#20CFB4;">Y</h2>
+    	<h2 style="color:#20CFB4;">I</h2>
     </div>
 
     <img src="Balloon-Border.png" width="100%" class="balloon-border">
@@ -148,11 +183,8 @@
 <p>fill it with your most beautiful smile 😊</p>
 <p>and make it the best memory.. 🎉</p>
 <p>lastly... 🎉</p>
-				<p>I want to say.🗣</p>
-			
 				<p>I'd like to wish you one more time</p>
-				<p>a very Happy Birthday Lucky 🥳</p>
-			
+				<p>a very Happy Birthday Prachi🥳</p>
 			</div>
 		</div>
 		<div class="navbar navbar-fixed-bottom">
@@ -165,7 +197,7 @@
     <button class="btn btn-primary" id="balloons_flying">Fly With Balloons 🎈</button>
     <button class="btn btn-primary" id="cake_fadein">Most Delicious cake 🎂 Ever</button>
     <button class="btn btn-primary" id="light_candle">Light Candle 🕯</button>
-    <button class="btn btn-primary" id="wish_message">Happy Birthday Lucky 🥳</button>
+    <button class="btn btn-primary" id="wish_message">Happy Birthday Prachi 🥳</button>
     <button class="btn btn-primary" id="story">A message ✉️ for you</button>
 </div>
 
