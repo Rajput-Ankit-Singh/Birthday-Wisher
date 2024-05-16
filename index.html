@@ -6,7 +6,29 @@
 <!--[if !IE]><!--><html lang="en"><!-- <![endif]-->
 <head>
     <title>Happy Birthday 🥳</title>
-    
+    <style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+    margin: 0;
+    background-color: #000; /* Set background to black for better contrast */
+  }
+
+  #text {
+    border-right: 2px solid #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 55px;
+    font-size: 24px; /* Adjust the font size as needed */
+    color: white;
+  }
+
+  .heart {
+    color: red;
+  }
+    </style>
     <meta charset="UTF-8" />
     <meta name="description" content="Happy Birthday Prachi">
     <meta name="robots" content="index, follow" />
@@ -189,15 +211,17 @@
 
     </div>
 
-<p id="text"></p>
+  <p id="text"></p>
   <script>
-    const text = "Made With ❤ by <b> ANKIT </b>";
+    const text = 'made with <span class="heart">❤</span> by ANKIT';
     let index = 0;
 
     function type() {
-      document.getElementById("text").textContent = text.slice(0, index++);
+      document.getElementById("text").innerHTML = text.slice(0, index++);
       if (index <= text.length) {
         setTimeout(type, 200);
+      } else {
+        document.getElementById("text").style.borderRight = "none"; // Remove the cursor after typing ends
       }
     }
 
