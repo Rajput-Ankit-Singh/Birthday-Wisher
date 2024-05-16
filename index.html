@@ -6,29 +6,6 @@
 <!--[if !IE]><!--><html lang="en"><!-- <![endif]-->
 <head>
     <title>Happy Birthday 🥳</title>
-    <style>
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 100vh;
-    margin: 0;
-    background-color: #000; /* Set background to black for better contrast */
-  }
-
-  #text {
-    border-right: 2px solid #fff;
-    white-space: nowrap;
-    overflow: hidden;
-    margin-bottom: 55px;
-    font-size: 24px; /* Adjust the font size as needed */
-    color: white;
-  }
-
-  .heart {
-    color: red;
-  }
-    </style>
     <meta charset="UTF-8" />
     <meta name="description" content="Happy Birthday Prachi">
     <meta name="robots" content="index, follow" />
@@ -50,19 +27,6 @@
     <!-- <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'> -->
     <link rel="stylesheet/less" href="cake.less">
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>
-    <style>
-  #text {
-    border-right: 2px solid #000;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 14ch;
-    animation: typing 3s steps(14) infinite;
-  }
-  
-  @keyframes typing {
-    from { width: 0; }
-  }
-</style>	
 </head>
 <body>
     <div class="loading"></div>
@@ -210,23 +174,11 @@
 
 
     </div>
+<footer style="position: fixed; bottom: 55px; left: 0; width: 100%; background-color: #f0f0f0; text-align: center;">
+    Made with ❤ by Ankit
+</footer>
 
-  <p id="text"></p>
-  <script>
-    const text = 'made with <span class="heart">❤</span> by ANKIT';
-    let index = 0;
 
-    function type() {
-      document.getElementById("text").innerHTML = text.slice(0, index++);
-      if (index <= text.length) {
-        setTimeout(type, 200);
-      } else {
-        document.getElementById("text").style.borderRight = "none"; // Remove the cursor after typing ends
-      }
-    }
-
-    type();
-  </script>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
