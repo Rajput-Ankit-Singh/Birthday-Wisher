@@ -28,19 +28,20 @@
     <!-- <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'> -->
     <link rel="stylesheet/less" href="cake.less">
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>
+    <style>
+  #text {
+    border-right: 2px solid #000;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 14ch;
+    animation: typing 3s steps(14) infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+  }
+</style>	
 </head>
-<div style="position:relative">
-  <div style="position:absolute;left:0;top:0">
-  	<div id="mainDiv"><
-		<div id="content">
-            <div id="code"> 
-        <span> style='color:#FFFFFF; '>Made </span>
-        <span> style='color:#FFFFFF; '> With </span>
-        <span> style='color:#808030; '> ❤ </span>
-        <span> style='color:#FFFFFF; '> by </span>
-        <span> style='color:#FFFFFF; '> <big> Ankit</big></span>
-            </div>
-        </div>
 <body>
     <div class="loading"></div>
     <audio class="song" controls loop>
@@ -162,7 +163,7 @@
     <p>and make it the best memory.. 🎉</p>
     <p>lastly... 🎉</p>
                 <p>I'd like to wish you one more time</p>
-                <p>a very Happy Birthday Prachi🥳</p>
+                <p>a very Happy Birthday Sneha🥳</p>
             </div>
         </div>
         <div class="navbar navbar-fixed-bottom">
@@ -188,7 +189,20 @@
 
     </div>
 
+<p id="text"></p>
+  <script>
+    const text = "Made With ❤ by <b> ANKIT </b>";
+    let index = 0;
 
+    function type() {
+      document.getElementById("text").textContent = text.slice(0, index++);
+      if (index <= text.length) {
+        setTimeout(type, 200);
+      }
+    }
+
+    type();
+  </script>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
