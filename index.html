@@ -7,9 +7,7 @@
 <head>
     <title>Happy Birthday 🥳</title>
     <meta charset="UTF-8" />
-    <meta name="description" content="Happy Birthday Prachi">
-    <meta name="robots" content="index, follow" />
-    <link rel="author" href="https://plus.google.com/u/1/+AyushSharma1/" /> 
+    <meta name="description" content="Happy Birthday Sneha"> 
     <meta name="keywords" content="Birthday, Happy">
     <!-- Strat of Facebook Meta -->
     <meta property="og:type" content="E-Greeting" />
@@ -26,10 +24,19 @@
     <link href='http://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
     <!-- <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'> -->
     <link rel="stylesheet/less" href="cake.less">
-    <link href="css/default.css" type="text/css" rel="stylesheet">
-<script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/functions.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>
+
+    <title>Happy Birthday  🥳</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        @font-face {
+      font-family: 'Inconsolata' !important;
+      src: url('Inconsolata.otf') format("truetype");
+        }
+    </style>
+    <link href="css/default.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
 </head>
 <body>
     <div class="loading"></div>
@@ -167,7 +174,7 @@
                         <button class="btn btn-primary" id="light_candle">Light Candle 🕯</button>
                         <button class="btn btn-primary" id="wish_message">Happy Birthday Sneha 🥳</button>
                         <button class="btn btn-primary" id="story">A message ✉️ for you</button>
-                        <a href="https://rajput-ankit-singh.github.io/Message/"> <button class="btn btn-primary" id="story">Click for more Surprise🎁</button> </a>
+                        <a href="https://rajput-ankit-singh.github.io/Birthday-Surprise/"> <button class="btn btn-primary" id="story">Click for more Surprise🎁</button> </a>
                     </div>
 
                     <!-- <button class="btn btn-primary" id="cake_cut">Let's Cut the Cake</button> -->
@@ -175,12 +182,43 @@
             </div>
         </div>
 
+<div id="code">
 
-    </div>
-<footer style="position: fixed; bottom: 55px; left: 0; width: 100%; background-color: #f0f0f0; text-align: center;">
-    Made with ❤ by Ankit
-</footer>
 
+    <span style='color:#FFFFFF; '>   Made </span><span style='color:#FFFFFF; '> With</span><span style='color:#ff0000; '> ❤ </span><span style='color:#FFFFFF; ; '>by </span><span style='color:#FFFFFF;'> Ankit
+            </div>
+<canvas id="canvas">Canvas is not supported in your browser.</canvas>
+</div>
+
+</div>
+<script type="text/javascript">
+
+var together = new Date();
+
+if (!document.createElement('canvas').getContext) {
+var msg = document.createElement("div");
+msg.id = "errorMsg";
+msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+document.body.appendChild(msg);
+$("#code").css("display", "none")
+$("#copyright").css("position", "absolute");
+$("#copyright").css("bottom", "10px");
+document.execCommand("stop");
+} else {
+setTimeout(function () {
+    startHeartAnimation();
+}, 5000);
+
+timeElapse(together);
+setInterval(function () {
+    timeElapse(together);
+}, 500);
+
+adjustCodePosition();
+$("#code").typewriter();
+}
+
+</script>
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
